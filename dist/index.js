@@ -24,7 +24,8 @@ var BaseClass = /** @class */ (function () {
     // Use this method when you have a bunch of properties that need getter and/or setter
     // functions that all do the same thing. It attaches the same getter function and
     // setter function to each property.
-    BaseClass.prototype._createGetterAndOrSetterForEach = function (propertyNames, configuration) {
+    BaseClass.prototype._createGetterAndOrSetterForEach = function (propertyNames, configuration // See interface defined below.
+    ) {
         var _this = this;
         propertyNames.forEach(function (propertyName, index, propertyNames) {
             var propertyDefinition = { enumerable: true, configurable: true };

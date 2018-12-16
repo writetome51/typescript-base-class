@@ -29,7 +29,7 @@ export abstract class BaseClass {
 
 	protected _createGetterAndOrSetterForEach(
 		propertyNames: string[],
-		configuration: IGetterSetterConfiguration
+		configuration: IGetterSetterConfiguration // See interface defined below.
 	): void {
 
 		propertyNames.forEach((propertyName, index, propertyNames) => {

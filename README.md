@@ -4,14 +4,6 @@ An abstract Typescript/Javascript class with properties and methods that maybe
 every class should have.
 
 
-## Installation
-
-You must have npm installed first.  Then, in the command line:
-
-```bash
-npm install @writetome51/base-class
-```
-
 ## Loading
 ```
 // If using TypeScript:
@@ -56,7 +48,7 @@ protected   _createGetterAndOrSetterForEach(
 	   
 	   
 protected   _returnThis_after(voidExpression: any) : this
-    // Executes voidExpression and returns this.
+    // voidExpression is executed, then function returns this.
     // Even if voidExpression returns something, the returned data isn't used.
 
 protected   _runMethod_and_returnThis(
@@ -66,14 +58,6 @@ protected   _runMethod_and_returnThis(
     additionalAction?: Function // takes the result returned by method as an argument.
 ) : this
 ```
-
-
-## Usage Examples
-
-```
-
-```
-
 
 
 ## License
