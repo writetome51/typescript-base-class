@@ -1,23 +1,24 @@
 export declare abstract class BaseClass {
-	readonly className: any;
+
+	readonly className: string;
 
 
 	protected _returnThis_after(voidExpression: any): this;
 
 
 	protected _runMethod_and_returnThis(
-		callingObject: any,
-		method: Function,
-		methodArgs: any[],
-		additionalAction?: Function
+		callingObject: any, method: Function, methodArgs: any[], additionalAction?: Function
 	): this;
 
 
-	protected _createGetterAndOrSetterForEach(propertyNames: string[], configuration: GetterSetterConfiguration): void;
+	protected _createGetterAndOrSetterForEach(
+		propertyNames: string[],
+		configuration: IGetterSetterConfiguration
+	): void;
 }
 
 
-export interface GetterSetterConfiguration {
+export interface IGetterSetterConfiguration {
 	get_setterFunction?: (propertyName: string, index?: number, propertyNames?: string[]) => Function;
 	get_getterFunction?: (propertyName: string, index?: number, propertyNames?: string[]) => Function;
 }

@@ -1,7 +1,7 @@
 export abstract class BaseClass {
 
 
-	get className() {
+	get className(): string {
 		// @ts-ignore
 		return this.constructor.name; // this works.
 	}
@@ -30,7 +30,7 @@ export abstract class BaseClass {
 	protected _createGetterAndOrSetterForEach(
 		propertyNames: string[],
 		configuration: IGetterSetterConfiguration
-	) {
+	): void {
 
 		propertyNames.forEach((propertyName, index, propertyNames) => {
 
@@ -54,11 +54,11 @@ export abstract class BaseClass {
 
 
 export interface IGetterSetterConfiguration {
-	// This function takes the string property name as argument and returns the setter function.
-	// The setter function must take one parameter and return void.
+	// get_setterFunction takes the property name as first argument and returns the setter
+	// function.  The setter function must take one parameter and return void.
 	get_setterFunction?: (propertyName: string, index?: number, propertyNames?: string[]) => Function;
 
-	// This function takes the string property name as argument and returns the getter function.
-	// The getter function must return something.
+	// get_getterFunction takes the property name as first argument and
+	// returns the getter function.  The getter function must return something.
 	get_getterFunction?: (propertyName: string, index?: number, propertyNames?: string[]) => Function;
 }
