@@ -25,26 +25,27 @@ protected   _createGetterAndOrSetterForEach(
 		propertyNames: string[],
 		configuration: IGetterSetterConfiguration
 	   ) : void
-	   /*********************
-	   Use this method when you have a bunch of properties that need getter and/or 
-	   setter functions that all do the same thing. It attaches the same getter 
-	   function and setter function to each property.
-	   IGetterSetterConfiguration is this object:
-	   {
-	        get_setterFunction?: (
-	            propertyName: string, index?: number, propertyNames?: string[]
-	        ) => Function,
-	            // get_setterFunction takes the property name as first argument and 
-	            // returns the setter function.  The setter function must take one 
-	            // parameter and return void.
-	        
-	        get_getterFunction?: (
-	            propertyName: string, index?: number, propertyNames?: string[]
-	        ) => Function
-	            // get_getterFunction takes the property name as first argument and 
-	            // returns the getter function.  The getter function must return something.
-	   }
-	   *********************/ 
+    /*********************
+    Use this method when you have a bunch of properties that need getter and/or 
+    setter functions that all do the same thing. You pass in an array of string 
+    names of those properties, and the method attaches the same getter and/or 
+    setter function to each property.
+    IGetterSetterConfiguration is this object:
+    {
+        get_setterFunction?: (
+             propertyName: string, index?: number, propertyNames?: string[]
+        ) => Function,
+	    // get_setterFunction takes the property name as first argument and 
+	    // returns the setter function.  The setter function must take one 
+	    // parameter and return void.
+	    
+        get_getterFunction?: (
+             propertyName: string, index?: number, propertyNames?: string[]
+        ) => Function
+	    // get_getterFunction takes the property name as first argument and 
+	    // returns the getter function.  The getter function must return something.
+    }
+    *********************/ 
 	   
 	   
 protected   _returnThis_after(voidExpression: any) : this
