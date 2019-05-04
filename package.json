@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/base-class",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "An abstract Typescript/Javascript class with properties and methods that perhaps every class should have",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -26,5 +26,8 @@
   "devDependencies": {
     "typescript": "^3.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@writetome51/get-property": "~1.0.4",
+    "@writetome51/has-value-no-value": "~1.0.2"
+  }
 }

@@ -1,3 +1,7 @@
+import { getProperty } from '@writetome51/get-property';
+import { noValue } from '@writetome51/has-value-no-value';
+
+
 export abstract class BaseClass {
 
 
@@ -11,15 +15,16 @@ export abstract class BaseClass {
 		return this;
 	}
 
+	
+	// `property` can contain dot-notation, i.e., 'property.subproperty.subsubproperty'
 
-	protected _runMethod_and_returnThis(
-		callingObject, method: Function, methodArgs: any[], additionalAction?: Function
-	): this {
-		let result = method.apply(callingObject, methodArgs);
-		if (additionalAction) {
-			additionalAction(result);
+	protected _errorIfPropertyHasNoValue(property: string, propertyNameInError = ''): void {
+		let propValue = getProperty(property, this);
+
+		if (noValue(propValue)) {
+			if (!(propertyNameInError)) propertyNameInError = property;
+			throw new Error(`The property "${propertyNameInError}" has no value`);
 		}
-		return this;
 	}
 
 

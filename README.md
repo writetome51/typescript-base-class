@@ -52,14 +52,32 @@ protected   _returnThis_after(voidExpression: any) : this
     // voidExpression is executed, then function returns this.
     // Even if voidExpression returns something, the returned data isn't used.
 
-protected   _runMethod_and_returnThis(
-    callingObject, 
-    method: Function, 
-    methodArgs: any[], 
-    additionalAction?: Function // takes the result returned by method as an argument.
-) : this
+
+protected   _errorIfPropertyHasNoValue(
+                property: string, // can contain dot-notation, i.e., 'property.subproperty'
+                propertyNameInError? = ''
+            ) : void
+    // If value of this[property] is undefined or null, it triggers fatal error:
+    // `The property "${propertyNameInError}" has no value.`
 ```
 
+## Explanation of syntax in above code examples
+ 
+Variable declaration: &nbsp; `varName: type`  
+Function declaration: &nbsp; `functionName(...parameters): type_returned`  
+
+When specifying a variable type must be a specific function:  
+`varName: (...parameters) => type_returned`  
+
+Optional parameter in a function:  
+`parameterName? = (default_value)` &nbsp; or &nbsp; `parameterName?: type`  
+
+Optional property in an object:  &nbsp; `propertyName?: type`  
+
+Variable parsed inside a literal string:  
+```
+`This is a string containing the value of ${varName}`
+```
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
