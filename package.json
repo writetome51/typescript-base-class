@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/writetome51/typescript-base-class#readme",
   "devDependencies": {
-    "typescript": "^3.0.1"
   },
   "dependencies": {
     "@writetome51/get-property": "~1.0.4",

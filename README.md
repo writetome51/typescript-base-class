@@ -4,15 +4,6 @@ An abstract Typescript/Javascript class with properties and methods that maybe
 every class should have.
 
 
-## Loading
-```
-// If using TypeScript:
-import { BaseClass } from '@writetome51/base-class';
-// If using ES5 JavaScript:
-var BaseClass = require('@writetome51/base-class').BaseClass;
-```
-
-
 ## Properties
 
 #### className: string (read-only)
@@ -78,6 +69,19 @@ Variable parsed inside a literal string:
 ```
 `This is a string containing the value of ${varName}`
 ```
+
+## Installation
+`npm i  @writetome51/base-class`
+
+
+## Loading
+```
+// If using TypeScript:
+import { BaseClass } from '@writetome51/base-class';
+// If using ES5 JavaScript:
+var BaseClass = require('@writetome51/base-class').BaseClass;
+```
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
