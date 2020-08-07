@@ -1,7 +1,8 @@
 {
   "name": "@writetome51/base-class",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "An abstract Typescript/Javascript class with properties and methods that perhaps every class should have",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -23,10 +24,9 @@
     "url": "https://github.com/writetome51/typescript-base-class/issues"
   },
   "homepage": "https://github.com/writetome51/typescript-base-class#readme",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
-    "@writetome51/get-property": "~1.0.4",
-    "@writetome51/has-value-no-value": "~1.0.2"
+    "@writetome51/get-property": "^2.0.0",
+    "@writetome51/has-value-no-value": "^2.0.0"
   }
 }

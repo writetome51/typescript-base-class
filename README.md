@@ -75,11 +75,8 @@ Variable parsed inside a literal string:
 
 
 ## Loading
-```
-// If using TypeScript:
+```js
 import { BaseClass } from '@writetome51/base-class';
-// If using ES5 JavaScript:
-var BaseClass = require('@writetome51/base-class').BaseClass;
 ```
 
 

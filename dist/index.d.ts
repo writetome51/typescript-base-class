@@ -9,7 +9,10 @@ export declare abstract class BaseClass {
 	protected _errorIfPropertyHasNoValue(property: string, displayNameInError?: string): void;
 
 
-	protected _createGetterAndOrSetterForEach(propertyNames: string[], configuration: IGetterSetterConfiguration): void;
+	protected _createGetterAndOrSetterForEach(
+		propertyNames: string[],
+		configuration: IGetterSetterConfiguration
+	): void;
 }
 
 
